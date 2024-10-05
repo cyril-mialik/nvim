@@ -5,28 +5,46 @@ require('lualine').setup {
         section_separators = { left = '', right = '' },
     },
     sections = {
-        lualine_a = { { 'mode', separator = { left = '' }, right_padding = 2 } },
-        lualine_b = { 'filename' },
+        lualine_a = { { 'mode', separator = { left = '', right = ' ' }, right_padding = 2 } },
+        lualine_b = { { 'filename', separator = { left = '' } } },
         lualine_c = {
-            { "branch", icon = "" },
+            { 'branch', icon = '| ' },
             {
-                "diff",
+                'diff',
                 colored = true,
                 diff_color = {
-                    added    = { fg = "#28A745" },
-                    modified = { fg = "#DBAB09" },
-                    removed  = { fg = "#D73A49" }
+                    added    = { fg = '#28A745' },
+                    modified = { fg = '#DBAB09' },
+                    removed  = { fg = '#D73A49' }
                 },
                 symbols = {
-                    added    = " ",
-                    modified = " ",
-                    removed  = " "
+                    added    = ' ',
+                    modified = ' ',
+                    removed  = ' '
                 }
             }
         },
-        lualine_x = {},
+        lualine_x = {
+            {
+                "diagnostics",
+                sources = { "nvim_lsp" },
+                sections = { "error", "warn", "info", "hint" },
+                diagnostics_color = {
+                    error = { fg = '#D73A49' },
+                    warn  = { fg = '#DBAB09' },
+                    info  = { fg = '#0087AF' },
+                    hint  = { fg = '#28A745' }
+                },
+                symbols = {
+                    error = '| error ',
+                    warn = '| warn ',
+                    info = '| info ',
+                    hint = '| hint ',
+                }
+            }
+        },
         lualine_y = { 'filetype', 'progress' },
-        lualine_z = { { 'location', separator = { right = '' }, left_padding = 2 } },
+        lualine_z = { { 'location', separator = { right = '', left = ' ' }, left_padding = 2 } },
     },
     inactive_sections = {
         lualine_a = { 'filename' },

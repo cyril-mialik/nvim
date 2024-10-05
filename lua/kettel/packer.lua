@@ -18,7 +18,7 @@ return require('packer').startup(function(use)
         tag = "*", -- Use for stability; omit to use `main` branch for the latest features
         config = function()
             require("nvim-surround").setup({
-                -- Configuration here, or leave empty to use defaults
+
             })
         end
     })
@@ -26,8 +26,10 @@ return require('packer').startup(function(use)
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
+    use('ryanoasis/vim-devicons')
+    use('lewis6991/gitsigns.nvim')
 
-    use 'Mofiqul/dracula.nvim'
+    use('Mofiqul/dracula.nvim')
 
     use {
         'nvim-treesitter/nvim-treesitter',
