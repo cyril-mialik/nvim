@@ -7,6 +7,9 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+-- terminal
+vim.keymap.set('n', '<leader>t', ':terminal<CR>')
+vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]])
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", "\"_dP")
 -- next greatest remap ever : asbjornHaland
