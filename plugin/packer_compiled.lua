@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/cyril/.cache/nvim/packer_hererocks/2.1.1760617492/share/lua/5.1/?.lua;/Users/cyril/.cache/nvim/packer_hererocks/2.1.1760617492/share/lua/5.1/?/init.lua;/Users/cyril/.cache/nvim/packer_hererocks/2.1.1760617492/lib/luarocks/rocks-5.1/?.lua;/Users/cyril/.cache/nvim/packer_hererocks/2.1.1760617492/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/cyril/.cache/nvim/packer_hererocks/2.1.1760617492/lib/lua/5.1/?.so"
+local package_path_str = "/Users/cyril/.cache/nvim/packer_hererocks/2.1.1780076327/share/lua/5.1/?.lua;/Users/cyril/.cache/nvim/packer_hererocks/2.1.1780076327/share/lua/5.1/?/init.lua;/Users/cyril/.cache/nvim/packer_hererocks/2.1.1780076327/lib/luarocks/rocks-5.1/?.lua;/Users/cyril/.cache/nvim/packer_hererocks/2.1.1780076327/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/cyril/.cache/nvim/packer_hererocks/2.1.1780076327/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -74,6 +74,17 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    config = { "\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0" },
+    loaded = true,
+    path = "/Users/cyril/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
+  ["FixCursorHold.nvim"] = {
+    loaded = true,
+    path = "/Users/cyril/.local/share/nvim/site/pack/packer/start/FixCursorHold.nvim",
+    url = "https://github.com/antoinemadec/FixCursorHold.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/Users/cyril/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -149,6 +160,11 @@ _G.packer_plugins = {
     path = "/Users/cyril/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  neotest = {
+    loaded = true,
+    path = "/Users/cyril/.local/share/nvim/site/pack/packer/start/neotest",
+    url = "https://github.com/nvim-neotest/neotest"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/cyril/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -158,6 +174,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cyril/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-nio"] = {
+    loaded = true,
+    path = "/Users/cyril/.local/share/nvim/site/pack/packer/start/nvim-nio",
+    url = "https://github.com/nvim-neotest/nvim-nio"
   },
   ["nvim-surround"] = {
     config = { "\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0" },
@@ -180,6 +201,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cyril/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
+  },
+  rustaceanvim = {
+    loaded = true,
+    path = "/Users/cyril/.local/share/nvim/site/pack/packer/start/rustaceanvim",
+    url = "https://github.com/mrcjkb/rustaceanvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -204,6 +230,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: Comment.nvim
+time([[Config for Comment.nvim]], true)
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
+time([[Config for Comment.nvim]], false)
 -- Config for: nvim-surround
 time([[Config for nvim-surround]], true)
 try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")

@@ -29,6 +29,21 @@ return require('packer').startup(function(use)
   use('ryanoasis/vim-devicons')
   use('lewis6991/gitsigns.nvim')
 
+  use {
+    'mrcjkb/rustaceanvim',
+  }
+
+  use 'mfussenegger/nvim-dap'
+
+  use {
+    "nvim-neotest/neotest",
+    requires = {
+      "nvim-neotest/nvim-nio",
+      "nvim-lua/plenary.nvim",
+      "antoinemadec/FixCursorHold.nvim",
+    }
+  }
+
   use('Mofiqul/dracula.nvim')
 
   -- gcc	Нормальный	Закомментировать / раскомментировать текущую строку.
