@@ -1,11 +1,38 @@
 vim.pack.add({
+  { src = "https://github.com/Exafunction/windsurf.nvim" },
+  { src = "https://github.com/nvim-lua/plenary.nvim" },
+  { src = "https://github.com/hrsh7th/nvim-cmp" },
+})
+
+require("codeium").setup({
+  enable_cmp_source = false,
+  virtual_text = {
+    enabled = true,
+    key_bindings = {
+      accept = "<C-g>",
+      accept_word = "<S-Tab>",
+      accept_line = "<M-Tab>",
+      next = "<C-;>",
+      prev = "<C-,>",
+      clear = "<C-x>",
+    }
+  }
+})
+
+vim.pack.add({
   { src = "https://github.com/folke/tokyonight.nvim" },
 })
 
 require("tokyonight").setup({
   on_colors = function(colors)
     colors.bg = colors.none
-  end
+  end;
+  on_highlights = function(hl)
+    hl.LineNr = { fg = "#C0CAF5", bold = true }
+    hl.LineNrAbove = { fg = "#737AA2" }
+    hl.LineNrBelow = { fg = "#737AA2" }
+    hl.CursorLineNr = { fg = "#FF9E64", bold = true }
+  end,
 })
 
 vim.pack.add({
