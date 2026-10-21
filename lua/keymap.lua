@@ -11,6 +11,10 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+vim.keymap.set("n", "<leader>pc", function()
+  vim.cmd("Codeium Chat")
+end, { desc = "Open the Codeium Chat" })
+
 vim.keymap.set('n', '<leader>vv', ':vsplit<CR>')
 vim.keymap.set('n', '<leader>vs', ':split<CR>')
 
