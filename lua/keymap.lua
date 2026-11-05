@@ -103,3 +103,8 @@ end, opts)
 vim.keymap.set('n', ']d', function()
   vim.diagnostic.jump({ count = 1, float = true })
 end, opts)
+
+vim.keymap.set('n', '<leader>h', function()
+  local current = vim.lsp.inlay_hint.is_enabled({ bufnr = 0 })
+  vim.lsp.inlay_hint.enable(not current, { bufnr = 0 })
+end, { desc = 'Toggle Inlay Hints' })
