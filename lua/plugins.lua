@@ -26,7 +26,7 @@ vim.pack.add({
 require("tokyonight").setup({
   on_colors = function(colors)
     colors.bg = colors.none
-  end;
+  end,
   on_highlights = function(hl)
     hl.LineNr = { fg = "#C0CAF5", bold = true }
     hl.LineNrAbove = { fg = "#737AA2" }
@@ -258,6 +258,10 @@ vim.pack.add({
 })
 
 vim.pack.add({
+  { src = "https://github.com/nvim-neotest/neotest-python" }
+})
+
+vim.pack.add({
   { src = "https://github.com/mfussenegger/nvim-dap" }
 })
 
@@ -268,5 +272,6 @@ vim.pack.add({
 require("neotest").setup({
   adapters = {
     require("rustaceanvim.neotest"),
+    require("neotest-python"),
   },
 })
