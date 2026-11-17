@@ -78,22 +78,16 @@ vim.keymap.set('n', 'gD', "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
 vim.keymap.set('n', 'gi', "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 vim.keymap.set('n', 'gt', "<cmd>lua vim.lsp.buf.type_definition()<CR>", opts)
 
--- Find links (where variable are used)
 vim.keymap.set('n', 'gr', "<cmd>lua vim.lsp.buf.references()<CR>", opts)
 
--- Show information about definition
 vim.keymap.set('n', 'K', "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
 
--- Rename a variable through whole project
 vim.keymap.set('n', '<leader>gr', "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
 
--- Show the signature of a function
 vim.keymap.set('n', '<leader>k', "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
 
--- Format code
 vim.keymap.set('n', '<leader>f', "<cmd>lua vim.lsp.buf.format()<CR>", opts)
 
--- Show the actions of the code
 vim.keymap.set('n', '<leader>ca', "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
 
 vim.keymap.set('n', '[d', function()
