@@ -4,21 +4,6 @@ vim.pack.add({
   { src = "https://github.com/hrsh7th/nvim-cmp" },
 })
 
-require("codeium").setup({
-  enable_cmp_source = false,
-  virtual_text = {
-    enabled = false,
-    key_bindings = {
-      accept = "<C-g>",
-      accept_word = "<S-Tab>",
-      accept_line = "<M-Tab>",
-      next = "<C-;>",
-      prev = "<C-,>",
-      clear = "<C-x>",
-    }
-  }
-})
-
 vim.pack.add({
   { src = "https://github.com/folke/tokyonight.nvim" },
 })
